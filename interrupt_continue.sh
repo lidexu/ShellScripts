@@ -30,7 +30,7 @@ echo "the current_num is: "$current_num
 
 
 # do we need remove the result which generated already?
-check()
+check__()
 {
 	rm split*
 }

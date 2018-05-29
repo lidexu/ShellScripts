@@ -11,7 +11,7 @@ scriptFile="/workspace/data/BK/rfcn/Deformable-ConvNets/rfcn/rfcn_dcn_inference.
 inputFile=$1
 splitFilePrefix="split_file-"
 # gpu id  used to run
-gpuArray=(0 1 2 3 4 5 6 7)
+gpuArray=(0 1)
 #gpuArray=(5 6 7)
 gpuNum=${#gpuArray[@]}
 # inputfile
