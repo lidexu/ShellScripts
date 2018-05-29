@@ -9,11 +9,15 @@ else
 	echo "the file path is : "{$1}
 fi
 filePath=$1
+
+save_file="`date+%y%m%d`.json"
+
 cd filePath
 
 file_length=`find "split_file-**-result*" | wc -l`
 
 echo "there are ${file_length} split files to be merged"
 
-cat "split_file-**-result*" > merged.json
+cat "split_file-**-result*" > ${save_file}
+
 
