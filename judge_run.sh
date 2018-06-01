@@ -28,3 +28,4 @@ else
 	echo "No Interruption!"
 	cd $bash_dir
 	./loop_runScript.sh $inputFile
+fi

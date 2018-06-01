@@ -69,3 +69,13 @@ do
     `eval $runCmd`
 done
 
+# Merge the result into savename.json
+
+savename="`basename ${inputBasePath}`_rfcn.json"
+
+cd $inputBasePath
+
+cat split_file-**-result* > ${savename}
+
+
+

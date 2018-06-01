@@ -10,14 +10,14 @@ else
 fi
 filePath=$1
 
-save_file="`date+%y%m%d`.json"
+save_file="`basename $filePath`.json"
 
-cd filePath
+cd ${filePath}
 
 file_length=`find "split_file-**-result*" | wc -l`
 
 echo "there are ${file_length} split files to be merged"
 
-cat "split_file-**-result*" > ${save_file}
+cat split_file-**-result* > ${save_file}
 
 
