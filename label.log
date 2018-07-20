@@ -1,0 +1,128 @@
++ '[' '!' -n /Users/lidexu/Documents/project/Label-x/task_0628 ']'
++ echo 'the file path is : /Users/lidexu/Documents/project/Label-x/task_0628'
+the file path is : /Users/lidexu/Documents/project/Label-x/task_0628
++ '[' '!' -n 3800 ']'
++ echo 'the length of each task file is : 3800'
+the length of each task file is : 3800
++ filePath=/Users/lidexu/Documents/project/Label-x/task_0628
++ taskLen=3800
++ sand_file=/Users/lidexu/Documents/project/Label-x/Sand/terror-det-sands.json
+++ basename /Users/lidexu/Documents/project/Label-x/task_0628
++ task_name=task_0628
++ echo 'task_name is: task_0628'
+task_name is: task_0628
++ sands=/Users/lidexu/Documents/project/Label-x/task_0628-sand.json
++ gshuf -n 200 /Users/lidexu/Documents/project/Label-x/Sand/terror-det-sands.json
++ scriptFile=/Users/lidexu/Documents/project/Label-x/work-toolkit/labelX-toolkit/labelX_main.py
++ resPath=/Users/lidexu/Documents/project/Label-x/resData/
+++ date +%Y%m%d
++ Save_file=20180628_rfcn.json
++ echo 'The file will be saved in : 20180628_rfcn.json'
+The file will be saved in : 20180628_rfcn.json
+++ ls /Users/lidexu/Documents/project/Label-x/task_0628
++ file_list='20180417_rfcn.json
+20180418_rfcn.json
+20180419_rfcn.json
+20180420_rfcn.json
+20180421_rfcn.json
+20180422_rfcn.json'
++ cd /Users/lidexu/Documents/project/Label-x/task_0628
++ for file in '$file_list'
++ echo 'Merge file :20180417_rfcn.json'
+Merge file :20180417_rfcn.json
++ cat 20180417_rfcn.json
++ for file in '$file_list'
++ echo 'Merge file :20180418_rfcn.json'
+Merge file :20180418_rfcn.json
++ cat 20180418_rfcn.json
++ for file in '$file_list'
++ echo 'Merge file :20180419_rfcn.json'
+Merge file :20180419_rfcn.json
++ cat 20180419_rfcn.json
++ for file in '$file_list'
++ echo 'Merge file :20180420_rfcn.json'
+Merge file :20180420_rfcn.json
++ cat 20180420_rfcn.json
++ for file in '$file_list'
++ echo 'Merge file :20180421_rfcn.json'
+Merge file :20180421_rfcn.json
++ cat 20180421_rfcn.json
++ for file in '$file_list'
++ echo 'Merge file :20180422_rfcn.json'
+Merge file :20180422_rfcn.json
++ cat 20180422_rfcn.json
+++ date +%Y%m%d
++ split -a 2 -l 3800 20180628_rfcn.json terror-det-20180628
+++ date +%Y%m%d
++ sandDir=addsand-20180628
++ echo 'the dir wait to addsand is: addsand-20180628'
+the dir wait to addsand is: addsand-20180628
++ mkdir addsand-20180628
++ sandPath=/Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628
++ echo 'the sandPath is/Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628'
+the sandPath is/Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628
++ mv terror-det-20180628aa terror-det-20180628ab terror-det-20180628ac terror-det-20180628ad terror-det-20180628ae terror-det-20180628af terror-det-20180628ag /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628
++ cd /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628
+++ ls
++ for i in '$(ls)'
++ mv terror-det-20180628aa terror-det-20180628aa.json
+++ wc -l terror-det-20180628aa.json
+++ awk '{print $1}'
++ file_len=3800
++ [[ 3800 -lt 3800 ]]
++ echo Continue:
+Continue:
++ for i in '$(ls)'
++ mv terror-det-20180628ab terror-det-20180628ab.json
+++ wc -l terror-det-20180628ab.json
+++ awk '{print $1}'
++ file_len=3800
++ [[ 3800 -lt 3800 ]]
++ echo Continue:
+Continue:
++ for i in '$(ls)'
++ mv terror-det-20180628ac terror-det-20180628ac.json
+++ wc -l terror-det-20180628ac.json
+++ awk '{print $1}'
++ file_len=3800
++ [[ 3800 -lt 3800 ]]
++ echo Continue:
+Continue:
++ for i in '$(ls)'
++ mv terror-det-20180628ad terror-det-20180628ad.json
+++ wc -l terror-det-20180628ad.json
+++ awk '{print $1}'
++ file_len=3800
++ [[ 3800 -lt 3800 ]]
++ echo Continue:
+Continue:
++ for i in '$(ls)'
++ mv terror-det-20180628ae terror-det-20180628ae.json
+++ wc -l terror-det-20180628ae.json
+++ awk '{print $1}'
++ file_len=3800
++ [[ 3800 -lt 3800 ]]
++ echo Continue:
+Continue:
++ for i in '$(ls)'
++ mv terror-det-20180628af terror-det-20180628af.json
+++ wc -l terror-det-20180628af.json
+++ awk '{print $1}'
++ file_len=3800
++ [[ 3800 -lt 3800 ]]
++ echo Continue:
+Continue:
++ for i in '$(ls)'
++ mv terror-det-20180628ag terror-det-20180628ag.json
+++ wc -l terror-det-20180628ag.json
+++ awk '{print $1}'
++ file_len=2303
++ [[ 2303 -lt 3800 ]]
++ mv terror-det-20180628ag.json /Users/lidexu/Documents/project/Label-x/resData/
++ runcmd='python -u /Users/lidexu/Documents/project/Label-x/work-toolkit/labelX-toolkit/labelX_main.py --actionFlag 6 --dataTypeFlag 2 --logJsonList /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628 --sandJsonList /Users/lidexu/Documents/project/Label-x/task_0628-sand.json'
++ echo python -u /Users/lidexu/Documents/project/Label-x/work-toolkit/labelX-toolkit/labelX_main.py --actionFlag 6 --dataTypeFlag 2 --logJsonList /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628 --sandJsonList /Users/lidexu/Documents/project/Label-x/task_0628-sand.json
+python -u /Users/lidexu/Documents/project/Label-x/work-toolkit/labelX-toolkit/labelX_main.py --actionFlag 6 --dataTypeFlag 2 --logJsonList /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628 --sandJsonList /Users/lidexu/Documents/project/Label-x/task_0628-sand.json
+++ eval python -u /Users/lidexu/Documents/project/Label-x/work-toolkit/labelX-toolkit/labelX_main.py --actionFlag 6 --dataTypeFlag 2 --logJsonList /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628 --sandJsonList /Users/lidexu/Documents/project/Label-x/task_0628-sand.json
++++ python -u /Users/lidexu/Documents/project/Label-x/work-toolkit/labelX-toolkit/labelX_main.py --actionFlag 6 --dataTypeFlag 2 --logJsonList /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628 --sandJsonList /Users/lidexu/Documents/project/Label-x/task_0628-sand.json
++ terror-det-20180628aa.json terror-det-20180628ab.json terror-det-20180628ac.json terror-det-20180628ad.json terror-det-20180628ae.json terror-det-20180628af.json terror-det-20180628aa.json terror-det-20180628ab.json terror-det-20180628ac.json terror-det-20180628ad.json terror-det-20180628ae.json terror-det-20180628af.json param is ::: terror-det-20180628aa.json terror-det-20180628ab.json terror-det-20180628ac.json terror-det-20180628ad.json terror-det-20180628ae.json terror-det-20180628af.json 'Namespace(actionFlag=6,' addedSandLogJsonList=None, dataTypeFlag=2, finalUnionJsonList=None, 'iou='\''0.7'\'',' labeledJsonList=None, labeledJsonList_a=None, labeledJsonList_b=None, libraryJsonList=None, 'logJsonList='\''/Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628'\'',' outputErrorFlag=False, sandClsRatio=None, 'sandJsonList='\''/Users/lidexu/Documents/project/Label-x/task_0628-sand.json'\'',' 'sandNum=1000)' terror-det-20180628aa.json terror-det-20180628ab.json terror-det-20180628ac.json terror-det-20180628ad.json terror-det-20180628ae.json terror-det-20180628af.json begin runing terror-det-20180628aa.json terror-det-20180628ab.json terror-det-20180628ac.json terror-det-20180628ad.json terror-det-20180628ae.json terror-det-20180628af.json add sand to /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628/terror-det-20180628aa.json --- success --- /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628-addedSand-062814/terror-det-20180628aa.json add sand to /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628/terror-det-20180628ab.json --- success --- /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628-addedSand-062814/terror-det-20180628ab.json add sand to /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628/terror-det-20180628ac.json --- success --- /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628-addedSand-062814/terror-det-20180628ac.json add sand to /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628/terror-det-20180628ad.json --- success --- /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628-addedSand-062814/terror-det-20180628ad.json add sand to /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628/terror-det-20180628ae.json --- success --- /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628-addedSand-062814/terror-det-20180628ae.json add sand to /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628/terror-det-20180628af.json --- success --- /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628-addedSand-062814/terror-det-20180628af.json generate added sand folder is /Users/lidexu/Documents/project/Label-x/task_0628/addsand-20180628-addedSand-062814 THE SCRIPT RUN SUCCESS
+./LabeX_gen.sh: line 93: terror-det-20180628aa.json: command not found

@@ -60,7 +60,7 @@ check_Sl()
 }
 
 # remove '0' prefix caused the number beigins with '0' is octonary
-jobFlag=`echo ${current_num} | awk '{print $0+0}'`
+jobFlag=`echo ${current_num}|awk '{print $0+0}'`
 
 checkFlag=0
 while [ $jobFlag -lt $N ]; do

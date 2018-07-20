@@ -1,5 +1,6 @@
 #!/bin/bash
 # 将RFCN数据集进行处理，按要求生成结果任务包文件, 不足数文件保存在 /Users/lidexu/Documents/project/Label-x/resData
+# 从沙子文件中随机抽取200张作为沙子，并将沙子文件以任务名命名。
 
 
 set -x
@@ -22,6 +23,17 @@ fi
 
 filePath=$1
 taskLen=$2
+
+sand_file="/Users/lidexu/Documents/project/Label-x/Sand/terror-det-sands.json"
+task_name=`basename ${filePath}`
+echo "task_name is: "${task_name}
+# extract 200 lines from sanfile as sands
+sands="/Users/lidexu/Documents/project/Label-x/Sand/"${task_name}"-sand.json"
+gshuf -n 200 ${sand_file} > ${sands}
+# sand_result=${results}
+# echo "${sand_result}" >> ${sands}
+# echo "sands was saved in: "${sands}
+
 scriptFile="/Users/lidexu/Documents/project/Label-x/work-toolkit/labelX-toolkit/labelX_main.py"
 resPath="/Users/lidexu/Documents/project/Label-x/resData/"
 # Merge
@@ -75,7 +87,8 @@ runcmd="python -u "$scriptFile" \
 --actionFlag 6 \
 --dataTypeFlag 2 \
 --logJsonList ${sandPath} \
---sandJsonList /Users/lidexu/Documents/project/Label-x/20180404_rfcn_shazi.json"
+--sandJsonList ${sands}"
+
 
 echo ${runcmd}
 `eval ${runcmd}`
