@@ -66,6 +66,7 @@ while [ $jobFlag -lt $N ]; do
 	a=$?
 	check_Sl mp_refindeDet-res18-inference-demo.py
 	b=$?
+    job_sl_count=0
 	if [ $a -eq 0 ]; then
 		date
 		job_id=`printf "%.4d" $jobFlag`
@@ -89,5 +90,10 @@ while [ $jobFlag -lt $N ]; do
 		job_id=`printf "%.4d" $nowRunJobFlag`
 		echo "job ---"$job_id"--- running,sleep 60s"
 		sleep 60
+        job_sl_count=$[$job_sl_count+1]
 	fi
+    if [ job_sl_count -gt 10 ]; then
+        date
+        pkill -9 python
+    fi
 done
